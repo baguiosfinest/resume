@@ -47,6 +47,9 @@ body {
   text-align: center;
   padding: 5px;
   margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .icon__list {
@@ -66,7 +69,15 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 0 0 18px;
   list-style: none;
 }
 
+.flex__list li {
+  margin-bottom: 12px;
+}
+
+.flex__list li h4,
+.flex__list li p {
+  margin: 0;
+}
