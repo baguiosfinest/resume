@@ -5,7 +5,7 @@ export default class Experiences extends Component {
   render() {
     return (
       <div className="experiences">
-        <h3>EXPERIENCE</h3>
+        <h3 className="content__subtitle">EXPERIENCE</h3>
         <Experience />
         <Experience />
         <Experience />

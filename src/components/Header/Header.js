@@ -2,20 +2,23 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Name = styled.h1`
-  font-weight: normal;
+  font-weight: 600;
   text-align: center;
   margin: 0;
+  font-size: 2.4em;
+  text-transform: uppercase;
 `;
 
 const Position = styled.h4`
-  font-weight: normal;
+  font-weight: 300;
   text-align: center;
   margin: 0;
+  text-transform: uppercase;
 `;
 
 const StyledHeader = styled.header`
-  border-bottom: #ccc 5px solid;
-  padding: 24px 0;
+  border-bottom: #3f51b5 5px solid;
+  padding: 48px 0;
 `;
 
 

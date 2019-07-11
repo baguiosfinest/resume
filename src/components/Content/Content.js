@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Profile from '../Profile/Profile';
-import Experiences from '../Experience/Experience'
+import Experiences from '../Experience/Experiences'
 
 export default class Content extends Component {
   render() {
