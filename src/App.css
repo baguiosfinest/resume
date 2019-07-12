@@ -81,3 +81,41 @@ body {
 .flex__list li p {
   margin: 0;
 }
+
+
+/**
+* Experience
+**/ 
+.job__position {
+  margin: 0;
+}
+
+.job__company,
+.job__desc {
+  margin: 0 0 15px;
+}
+
+
+/**
+* 
+**/ 
+.content__skills_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill__name { 
+  font-size: .8em;
+}
+
+.progress {
+  background: #ccc;
+  width: 100%;
+}
+
+.progress__bar {
+  height: 15px;
+  width: 1%;
+  background-color: #3f51b5;
+}

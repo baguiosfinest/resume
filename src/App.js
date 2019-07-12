@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Sidebar, Content } from './components/index';
+import './css/normalize.css';
 import './App.css';
 
 function App() {
