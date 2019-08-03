@@ -53,11 +53,22 @@ body {
   flex: none;
 }
 
-.icon__list {
+.icon__list,
+.icon__list a {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 12px;
+}
+
+.icon__list a {
+  color: #3f51b5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icon__list a:hover {
+  color: #9fa8da;
 }
 
 .icon img {
@@ -119,4 +130,28 @@ body {
   height: 15px;
   width: 1%;
   background-color: #3f51b5;
+}
+
+
+.style_selector {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(121,134,203,0.5);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(121,134,203,0.5);
+  box-shadow: 0px 0px 7px 0px rgba(121,134,203,0.5);
+}
+
+.btn {
+  padding: 7px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #3f51b5;
+  font-size: 1rem;
+}
+
+.btn:hover,
+.btn--active {
+  background: #3f51b5;
+  color: #fff;
 }

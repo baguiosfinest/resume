@@ -14,8 +14,8 @@ export default class Experiences extends Component {
       <div className="experiences">
         <h3 className="content__subtitle">EXPERIENCE</h3>
         
-        { this.props.experiences.map((experience) => {
-          return <Experience details={experience} />;
+        { this.props.experiences.map((experience, index) => {
+          return <Experience key={index} details={experience} />;
         }) }
         
       </div>

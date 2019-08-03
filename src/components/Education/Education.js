@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EducationItem from './EducationItem';
+import data from '../../data/sonny';
 
 export default class Education extends Component {
   render() {
@@ -7,22 +8,18 @@ export default class Education extends Component {
       <div className="content__education bt_underline">
         <h3 className="content__subtitle">EDUCATION</h3>
         <ul className="flex__list">
-          <li>
-            <EducationItem 
-              type="Diploma"
-              course="Information Technology"
-              school="Queensford College"
-              date="2019-present"
-            />
-          </li>
-          <li>
-            <EducationItem 
-              type="Bachelors Degree"
-              course="Computer Science"
-              school="University of the Cordilleras"
-              date="2004-2007"
-            />
-          </li>
+          { data.education.map((edu, index) => {
+            return (
+              <li key={ index }>
+                <EducationItem 
+                  type={ edu.type }
+                  course={ edu.course }
+                  school={ edu.school }
+                  date={ edu.date }
+                />
+              </li>
+            )
+          }) }
         </ul>
       </div>
     )

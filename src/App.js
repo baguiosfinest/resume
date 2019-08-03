@@ -1,18 +1,36 @@
-import React from 'react';
-import { Header, Sidebar, Content } from './components/index';
+import React, { ComponentFactory } from 'react';
+import { Header, Sidebar, Content, StyleSelector } from './components/index';
 import './css/normalize.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="container">
-      <Header></Header>
-      <div className="content">
-        <Sidebar />
-        <Content />
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      style: 'default'
+    }
+    
+  }
+
+  onHandleClick = (text) => {
+    this.setState({
+      style: text
+    })
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <StyleSelector onHandleClick={ this.onHandleClick } style={ this.state.style } />
+        <Header></Header>
+        <div className="content">
+          <Sidebar />
+          <Content />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

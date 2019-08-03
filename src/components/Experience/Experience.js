@@ -14,8 +14,8 @@ export default class Experience extends Component {
         {
           (tasks) ?  
             <ul className="job__tasks">
-              { tasks.map((task) => {
-                return <li>{task}</li>
+              { tasks.map((task, index) => {
+                return <li key={ index }>{task}</li>
             }) }
             </ul> : null
         }
