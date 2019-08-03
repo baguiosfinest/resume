@@ -4,6 +4,7 @@ import '../../../node_modules/prismjs/components/prism-json';
 //import '../../vendor/prism/prism.min.js';
 import '../../vendor/prism/prism.okaidia.css';
 // import data from '../../data/sonny';
+import '../../css/animation.css';
 
 export default class JsonView extends Component {
 
@@ -15,7 +16,7 @@ export default class JsonView extends Component {
   render() {
     
     return (
-      <div className="view--json" id="view--json">
+      <div className="view--json fade-in-fwd" id="view--json">
         <pre className="language-json">
           <code className="language-json">
              { /*  */  }

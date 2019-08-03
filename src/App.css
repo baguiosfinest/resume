@@ -1,20 +1,4 @@
 /** Primary: #3f51b5  **/
-
-
-body {
-  padding: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  background: #fff;
-  -webkit-box-shadow: 0px 0px 7px 0px rgba(121,134,203,0.5);
-  -moz-box-shadow: 0px 0px 7px 0px rgba(121,134,203,0.5);
-  box-shadow: 0px 0px 7px 0px rgba(121,134,203,0.5);
-}
-
 .content {
   display: flex;
 }
@@ -32,7 +16,7 @@ body {
 }
 
 .content__subtitle { 
-  
+  font-size: 1.5em;
 }
 
 .bt_underline {

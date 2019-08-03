@@ -1,7 +1,12 @@
 import React, { ComponentFactory } from 'react';
-import { Header, Sidebar, Content, StyleSelector, JsonView } from './components/index';
+import { 
+  Header, 
+  Sidebar, 
+  Content, 
+  StyleSelector, 
+  JsonView,
+  Loading } from './components/index';
 import data from './data/sonny';
-import './css/normalize.css';
 import './App.css';
 
 class App extends React.Component {
@@ -9,20 +14,34 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      style: 'default'
+      style: 'default',
+      loading: false
     }
   }
 
   onHandleClick = (text) => {
     this.setState({
-      style: text
+      style: text,
+      loading: true
     })
   }
 
   handleView = () => {
     switch (this.state.style) {
-      case 'json': 
-        return (<JsonView data={ data } />);
+      case 'json':
+
+        setTimeout(() => {
+          this.setState({
+            loading: false
+          })
+        }, 1000);
+
+        return (this.state.loading) ? 
+          <Loading /> :
+          <JsonView data={ data } />;
+      
+
+        //return (<JsonView data={ data } />);
       case 'default':
       default:
         return (

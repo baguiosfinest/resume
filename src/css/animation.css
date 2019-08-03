@@ -4,10 +4,16 @@
  * animation fade-in-fwd
  * ----------------------------------------
  */
+
+ .fade-in-fwd {
+	-webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
  @-webkit-keyframes fade-in-fwd {
   0% {
-    -webkit-transform: translateZ(-80px);
-            transform: translateZ(-80px);
+    -webkit-transform: translateZ(-200px);
+            transform: translateZ(-200px);
     opacity: 0;
   }
   100% {
@@ -18,8 +24,8 @@
 }
 @keyframes fade-in-fwd {
   0% {
-    -webkit-transform: translateZ(-80px);
-            transform: translateZ(-80px);
+    -webkit-transform: translateZ(-200px);
+            transform: translateZ(-200px);
     opacity: 0;
   }
   100% {
