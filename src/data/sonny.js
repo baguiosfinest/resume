@@ -67,7 +67,7 @@ export default {
     {
       "id": 5,
       "name": "React",
-      "rate": 8
+      "rate": 6
     },
     {
       "id": 6,
