@@ -1,5 +1,6 @@
 import React, { ComponentFactory } from 'react';
-import { Header, Sidebar, Content, StyleSelector } from './components/index';
+import { Header, Sidebar, Content, StyleSelector, JsonView } from './components/index';
+import data from './data/sonny';
 import './css/normalize.css';
 import './App.css';
 
@@ -10,7 +11,6 @@ class App extends React.Component {
     this.state = {
       style: 'default'
     }
-    
   }
 
   onHandleClick = (text) => {
@@ -19,15 +19,31 @@ class App extends React.Component {
     })
   }
 
+  handleView = () => {
+    switch (this.state.style) {
+      case 'json': 
+        return (<JsonView data={ data } />);
+      case 'default':
+      default:
+        return (
+          <div className="view--default">
+            <Header></Header>
+            <div className="content">
+              <Sidebar />
+              <Content />
+            </div>
+          </div>
+        )
+    }
+  }
+
   render() {
     return (
       <div className="container">
         <StyleSelector onHandleClick={ this.onHandleClick } style={ this.state.style } />
-        <Header></Header>
-        <div className="content">
-          <Sidebar />
-          <Content />
-        </div>
+        {
+          this.handleView()
+        }
       </div>
     );
   }
