@@ -1,12 +1,13 @@
-import React, { ComponentFactory } from 'react';
-import { 
-  Header, 
-  Sidebar, 
-  Content, 
+import React, { Component } from 'react';
+import {
   StyleSelector, 
   JsonView,
-  Loading } from './components/index';
+  Loading,
+  DefaultView,
+  EditView } from './components/index';
+
 import data from './data/sonny';
+import edit_icon from './images/edit-document.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -26,32 +27,35 @@ class App extends React.Component {
     })
   }
 
+  onHandleEditClick = () => {
+    this.setState({
+      style: 'edit',
+      loading: true
+    })
+  }
+
+  showLoading = () => {
+    setTimeout(() => {
+      this.setState({
+        loading: false
+      })
+    }, 1000);
+  }
+
   handleView = () => {
     switch (this.state.style) {
       case 'json':
-
-        setTimeout(() => {
-          this.setState({
-            loading: false
-          })
-        }, 1000);
-
+        this.showLoading();
         return (this.state.loading) ? 
           <Loading /> :
           <JsonView data={ data } />;
-      
-
-        //return (<JsonView data={ data } />);
+      case 'edit':
+          this.showLoading();
+          return <EditView />
       case 'default':
       default:
         return (
-          <div className="view--default">
-            <Header></Header>
-            <div className="content">
-              <Sidebar />
-              <Content />
-            </div>
-          </div>
+          <DefaultView data={ data } />
         )
     }
   }
@@ -59,6 +63,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        <div className="btn__edit" onClick={ this.onHandleEditClick }> <img src={ edit_icon } alt="Edit" /> Edit</div>
         <StyleSelector onHandleClick={ this.onHandleClick } style={ this.state.style } />
         {
           this.handleView()

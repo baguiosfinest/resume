@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Prism from 'prismjs';
-import '../../../node_modules/prismjs/components/prism-json';
+import '../../../../node_modules/prismjs/components/prism-json';
 //import '../../vendor/prism/prism.min.js';
-import '../../vendor/prism/prism.okaidia.css';
+import '../../../vendor/prism/prism.okaidia.css';
 // import data from '../../data/sonny';
-import '../../css/animation.css';
+import '../../../css/animation.css';
 
 export default class JsonView extends Component {
 

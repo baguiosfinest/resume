@@ -16,11 +16,17 @@
 }
 
 .content__subtitle { 
-  font-size: 1.5em;
+  font-size: 1.4em;
+  text-transform: uppercase;
 }
 
 .bt_underline {
   border-bottom: #3f51b5 1px solid;
+}
+
+.btop_underline {
+  border-top: #3f51b5 1px solid;
+  margin-top: 25px;
 }
 
 .icon {
@@ -60,6 +66,26 @@
   height: auto;
 }
 
+.btn__edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 10px 10px;
+  cursor: pointer;
+  opacity: .5;
+  transition: all ease-in .3s;
+}
+
+.btn__edit:hover {
+  opacity: 1;
+}
+
+.btn__edit img {
+  max-width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
 
 .flex__list {
   display: flex;

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import Profile from '../Profile/Profile';
-import Experiences from '../Experience/Experiences';
-
-import data from '../../data/sonny';
-
-const experiences = data.experiences;
+import { References, Experiences, Profile } from '../index';
 
 export default class Content extends Component {
   render() {
+    const data = this.props.data;
+    const experiences = data.experiences;
+    const references = data.references;
+
     return (
       <div className="content__main">
         <Profile />
         <Experiences experiences={ experiences } />
+        { (references) ? <References references={ references } /> : null }
       </div>
     )
   }

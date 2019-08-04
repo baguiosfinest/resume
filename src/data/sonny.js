@@ -96,5 +96,30 @@ export default {
         "tasks": ["Eat", "Love", "Pray"]
       }
     }
-  ]
+  ],
+  "references": [{
+    "name": "Reference Name",
+    "position": "Team Leader",
+    "company": "Company Name",
+    "contact": "012412312",
+    "email": "sample@gmail.com"
+  },{
+    "name": "Reference Name",
+    "position": "Team Leader",
+    "company": "Company Name",
+    "contact": "012412312",
+    "email": "sample@gmail.com"
+  },{
+    "name": "Reference Name",
+    "position": "Team Leader",
+    "company": "Company Name",
+    "contact": "012412312",
+    "email": "sample@gmail.com"
+  },{
+    "name": "Reference Name",
+    "position": "Team Leader",
+    "company": "Company Name",
+    "contact": "012412312",
+    "email": "sample@gmail.com"
+  }]
 }

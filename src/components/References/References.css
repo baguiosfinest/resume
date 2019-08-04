@@ -1,0 +1,14 @@
+.references__list {
+  display: flex;
+  
+  flex-wrap: wrap;
+}
+
+.references__list_item {
+  margin-bottom: 1.5em;
+  flex-basis: 50%;
+}
+
+.references__list_item p {
+  margin: 0;
+}

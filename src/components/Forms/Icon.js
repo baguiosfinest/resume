@@ -9,6 +9,7 @@ const icons = {
   "facebook" : '../../images/facebook-letter-logo.svg',
   "linkedin" : '../../images/linkedin-logo.svg',
   "address" : '../../images/baseline-home-24px.svg',
+  "edit": '../../images/edit-document.svg'
 }
 
 export default class Icon extends Component {
