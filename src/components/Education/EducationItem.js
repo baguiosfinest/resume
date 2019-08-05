@@ -8,7 +8,7 @@ export default function EducationItem(props) {
         { props.course }
       </h4>
       <p>{ props.school }<br />
-        { props.date }</p>
+        { props.startDate } - { props.endDate }</p>
     </div>
   )
 }

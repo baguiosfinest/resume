@@ -62,8 +62,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="btn__edit" onClick={ this.onHandleEditClick }> <img src={ edit_icon } alt="Edit" /> Edit</div>
+      <div className={ (this.state.style == 'edit') ? 'container is-maintenance' : 'container' }>
+        { (this.state.style === 'default')? 
+           <div className="btn__edit" onClick={ this.onHandleEditClick }> <img src={ edit_icon } alt="Edit" /> Edit</div> : null
+        }
         <StyleSelector onHandleClick={ this.onHandleClick } style={ this.state.style } />
         {
           this.handleView()

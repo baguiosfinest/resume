@@ -1,6 +1,7 @@
 import Header from './Header/Header';
 import Sidebar from './Sidebar/Sidebar';
 import Content from './Content/Content';
+import Education from './Education/Education';
 import StyleSelector from './StyleSelector/StyleSelector';
 import JsonView from './Views/JsonView/JsonView';
 import Loading from './Loading/Loading';
@@ -21,5 +22,6 @@ export {
   References,
   Experiences,
   Profile,
-  EditView
+  EditView,
+  Education
 }

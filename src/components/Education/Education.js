@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import EducationItem from './EducationItem';
-import data from '../../data/sonny';
 
 export default class Education extends Component {
   render() {
+    const data = this.props.data;
     return (
       <div className="content__education bt_underline">
         <h3 className="content__subtitle">EDUCATION</h3>
@@ -15,7 +15,8 @@ export default class Education extends Component {
                   type={ edu.type }
                   course={ edu.course }
                   school={ edu.school }
-                  date={ edu.date }
+                  startDate={ edu.startDate }
+                  endDate={ edu.endDate }
                 />
               </li>
             )

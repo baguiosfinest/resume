@@ -1,10 +1,12 @@
 $primary-color: #3f51b5;
+$red : rgb(226, 62, 57);
 
 .input__field {
   position: relative;
   margin-bottom: 20px;
 }
 
+.select__input,
 .input__field_input{
   border: 0; 
   padding: 6px 0; 
@@ -57,5 +59,42 @@ textarea.input__field_input {
   min-height: 100px;
   ~ .focus-border{
     bottom: 3px; 
+  }
+}
+
+// .select__input {
+//   border: none;
+//   border-bottom: 1px solid #ccc; 
+// }
+
+.btn {
+  padding: 7px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #3f51b5;
+  font-size: 1rem;
+  text-align: center;
+
+  &:hover,
+  &--active {
+    background: #3f51b5;
+    color: #fff;
+  }
+
+  &--primary {
+    background: $primary-color;
+    color: #fff;
+    border: none;
+    &:hover {
+      background: rgba($color: $primary-color, $alpha: .9);
+    }
+  }
+
+  &--danger {
+    background: $red;
+    color: #fff;
+    border: none;
+    &:hover {
+      background: rgba($color: $red, $alpha: .9);
+    }
   }
 }

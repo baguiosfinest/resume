@@ -12,13 +12,17 @@ export default class Experience extends Component {
         <p className="job__company"><i>{ details.company } / { details.date }</i></p>
         {(details.description.intro) ? <p className="job__desc">{details.description.intro}</p> : null }
         {
-          (tasks) ?  
-            <ul className="job__tasks">
-              { tasks.map((task, index) => {
-                return <li key={ index }>{task}</li>
-            }) }
-            </ul> : null
+          (tasks) ? 
+            <React.Fragment>
+              <h4 className="job__subtitle">Job Description:</h4> 
+              <ul className="job__tasks">
+                { tasks.map((task, index) => {
+                  return <li key={ index }>{task}</li>
+              }) }
+              </ul>
+            </React.Fragment> : null
         }
+        {(details.description.tools) ? <p className="job__tools"><strong>Tools: </strong>{details.description.tools}</p> : null }
       </div>
     )
   }

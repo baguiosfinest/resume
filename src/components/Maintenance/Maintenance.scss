@@ -1,0 +1,28 @@
+
+
+.container {
+
+  &.is-maintenance {
+    background: url(../../images/galaxy.jpg) no-repeat bottom center;
+    background-size: cover;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    
+    .view--edit {
+      width: 100%;
+    }
+
+  }
+}
+
+.view--edit {
+  // width: 100%;
+}
+
+.maintenance {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
